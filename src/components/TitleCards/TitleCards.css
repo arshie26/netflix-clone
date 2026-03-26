@@ -1,0 +1,36 @@
+
+.title-cards{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.movies__title{
+    margin-bottom: 8px;
+}
+
+.card-list{
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+}
+
+.card-list::-webkit-scrollbar{
+    display: none;
+}
+
+.movie__img{
+    width: 240px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card{
+    position: relative;
+}
+
+.movie__title{
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}

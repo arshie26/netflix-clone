@@ -13,7 +13,7 @@
     position: absolute;
     bottom: 10%;
     padding-left: 6%;
-    width: 100%;
+    width: -webkit-fill-available;
     display: flex;
     flex-direction: column;
 }
@@ -42,9 +42,11 @@
     padding: 8px 20px;
     gap: 10px;
     font-size: 15px;
+    font-weight: 600;
     background: white;
     border-radius: 4px;
     cursor: pointer;
+    transition: all ease 300ms;
 }
 
 .hero__btns img{
@@ -52,9 +54,16 @@
 }
 
 .hero__btns .dark-btn{
-    background: grey;
-    color: white;
+    background: #6d6d6eb3;
+    color: #fff;
 }
 
+.btn:hover{
+    background: #ffffffbf;
+    transform: scale(1.1);
+}
 
+.dark-btn:hover{
+    background-color: #6d6d6e66;
+}
 
