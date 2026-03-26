@@ -1,0 +1,60 @@
+
+.banner__img{
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, black 75%);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 75%);
+}
+
+.hero{
+    position: relative;
+}
+
+.hero__caption{
+    position: absolute;
+    bottom: 10%;
+    padding-left: 6%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__caption p{
+    max-width: 700px;
+}
+
+.caption__img{
+    width: 90%;
+    max-width: 420px;
+    margin-bottom: 32px;
+}
+
+.hero__btns{
+    display: flex;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.hero__btns .btn{
+    display: inline-flex;
+    align-items: center;
+    border: 0;
+    outline: 0;
+    padding: 8px 20px;
+    gap: 10px;
+    font-size: 15px;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hero__btns img{
+    width: 30px;
+}
+
+.hero__btns .dark-btn{
+    background: grey;
+    color: white;
+}
+
+
+
