@@ -67,3 +67,19 @@
     background-color: #6d6d6e66;
 }
 
+.popular{
+    
+}
+
+.blockbusters{
+    
+    padding-left: 20px;
+}
+
+.movie__cards{
+    display: flex;
+}
+
+.movie__card{
+    padding: 20px;
+}

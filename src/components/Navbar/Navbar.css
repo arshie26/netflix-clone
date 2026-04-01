@@ -9,7 +9,6 @@
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10%, transparent);
     z-index: 1;
     max-width: 1400px;
-    margin: 0 auto;
 }
 
 .navbar-left{
