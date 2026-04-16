@@ -47,7 +47,7 @@ const TitleCards = (props) => {
   /* RUNS GETMOVIES TO RETRIEVE MOVIES LIST
     WHEN COMPONENT MOUNTS */
   useEffect(() => {
-    cardsRef.current.addEventListener("wheel", handleWheel);
+    cardsRef.current?.addEventListener("wheel", handleWheel);
     getMovies();
     console.log("Movies List ", moviesList);
   }, [])
