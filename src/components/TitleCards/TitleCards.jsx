@@ -55,13 +55,13 @@ const TitleCards = (props) => {
   return (
     <div className='title__cards'>
       <h2 className="movies__title">{props.title? props.title : "Popular on Netflix"}</h2>
-      <div className="card-list" >
+      <div className="card-list" ref={cardsRef} >
       {
         /* DISPLAYS EACH MOVIE IN THE LIST */
         moviesList?.map((card, index) => {
           return (
             <Link key={index} to={`/player/${card.id}`} >
-            <div className="card" ref={cardsRef}>
+            <div className="card" >
               <img src={`https://media.themoviedb.org/t/p/w533_and_h300_face/${card.backdrop_path}`} className="movie__img" alt=""/>
               <h3 className="movie__title">{card.title}</h3>
             </div>
