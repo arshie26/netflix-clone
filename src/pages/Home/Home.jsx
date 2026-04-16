@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import './Home.css'
 import Navbar from '../../components/Navbar/Navbar'
 import hero_banner from '../../assets/hero_banner.jpg'
@@ -9,10 +9,11 @@ import TitleCards from '../../components/TitleCards/TitleCards';
 import Footer from '../../components/Footer/Footer';
 import cards_data from '../../assets/cards/Cards_data'
 
-const Home = () => {
+const Home = (props) => {
+
   return (
     <div>
-      <Navbar />
+      <Navbar user={props.user} />
       <div className="hero">
         <img src={hero_banner} className='banner__img'/>
         <div className='hero__caption'>
@@ -36,20 +37,7 @@ const Home = () => {
         <TitleCards title={"Upcoming"} category="upcoming" />
         <TitleCards title={"Top Pics for You"} category="now_playing" />
       </div>
-      <div className="movie__cards">
-        {
-          cards_data
-            .slice(0,4)
-            .map((card, index) => {
-              return (
-                <div className='movie__card' key={index}>
-                  <img src={card.image} />
-                </div>
-              )
-            })
-        }
-        
-      </div>
+      
       <Footer />
     </div>
   )

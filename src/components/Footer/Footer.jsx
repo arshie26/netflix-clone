@@ -16,17 +16,17 @@ const Footer = () => {
       </div>
       <div className="links">
           <li>Audio Description</li>
-          <li>Audio Description</li>
-          <li>Audio Description</li>
-          <li>Audio Description</li>
-          <li>Audio Description</li>
-          <li>Audio Description</li>
-          <li>Audio Description</li>
-          <li>Audio Description</li>
-          <li>Audio Description</li>
-          <li>Audio Description</li>
-          <li>Audio Description</li>
-          <li>Audio Description</li>
+          <li>Gift Cards</li>
+          <li>Investor Relations</li>
+          <li>Terms of Use</li>
+          <li>Legal Notices</li>
+          <li>Corporate Information</li>
+          <li>Help Center</li>
+          <li>Media Center</li>
+          <li>Jobs</li>
+          <li>Privacy</li>
+          <li>Cookie Preferences</li>
+          <li>Contact Us</li>
       </div>
       <p className="copyright">&copy; Arsh Agarwal</p>
     </footer>

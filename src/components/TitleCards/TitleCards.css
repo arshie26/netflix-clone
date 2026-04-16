@@ -1,5 +1,5 @@
 
-.title-cards{
+.title__cards{
     margin-top: 50px;
     margin-bottom: 30px;
     cursor: pointer;
@@ -33,4 +33,36 @@
     position: absolute;
     right: 10px;
     bottom: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 768px){
+    .movie__img{
+        width: 200px;
+    }
+
+    .movie__title{
+        font-size: 16px;
+    }
+
+    .movies__title{
+        font-size: 20px;
+    }
+    
+}
+
+@media (max-width: 500px){
+    .movie__img{
+        width: 150px;
+    }
+
+    .movie__title{
+        font-size: 10px;
+    }
+
+    .movies__title{
+        font-size: 15px;
+    }
+
 }

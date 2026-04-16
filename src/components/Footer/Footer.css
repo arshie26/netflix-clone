@@ -23,10 +23,17 @@ footer{
     list-style: none;
 }
 
-.column{
-    margin: 0 24px;
-}
-
 .copyright{
     margin-top: 24px;
+}
+
+@media (max-width: 768px){
+    .footer-icons img{
+        width: 20px;
+    }
+
+    .links{
+        grid-template-columns: auto auto;
+        font-size: 14px;
+    }
 }

@@ -1,0 +1,33 @@
+.back__arrow{
+    width: 60px;
+}
+
+.player{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.player img{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.player iframe{
+    height: 90%;
+    width: 90%;
+    border: none;
+}
+
+.player__info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}

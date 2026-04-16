@@ -2,13 +2,20 @@ import React, { useState } from 'react'
 import './TitleCards.css'
 import { useEffect, useRef } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'
 import cards_data from '../../assets/cards/Cards_data'
 
 const TitleCards = (props) => {
 
+  /* THE PURPOSE OF THIS COMPONENT IS TO RETRIEVE 
+  A LIST OF MOVIES FROM AN API AND DISPLAY THEM */
+
+  /* STATE VARIABLE FOR LIST OF MOVIES */
   const [moviesList, updateMoviesList] = useState([]);
+  
   const cardsRef = useRef();
 
+  /* USED TO SCROLL THROUGH THE MOVIES DISPLAY */
   const handleWheel = (event) => {
     event.preventDefault();
     cardsRef.current.scrollLeft += event.deltaY;
@@ -22,6 +29,8 @@ const TitleCards = (props) => {
     }
   };
   
+  /* FUNCTION RETRIEVES MOVIES FROM API 
+    AND PUTS THEM IN STATE VARIABLE*/
   async function getMovies(){
     
     try{
@@ -35,6 +44,8 @@ const TitleCards = (props) => {
     }
   }
 
+  /* RUNS GETMOVIES TO RETRIEVE MOVIES LIST
+    WHEN COMPONENT MOUNTS */
   useEffect(() => {
     //cardsRef.current.addEventListener("wheel", handleWheel);
     getMovies();
@@ -42,16 +53,19 @@ const TitleCards = (props) => {
   }, [])
 
   return (
-    <div className='title-cards'>
+    <div className='title__cards'>
       <h2 className="movies__title">{props.title? props.title : "Popular on Netflix"}</h2>
       <div className="card-list" >
       {
+        /* DISPLAYS EACH MOVIE IN THE LIST */
         moviesList?.map((card, index) => {
           return (
-            <div className="card" key={index} ref={cardsRef}>
-              <img src={`https://media.themoviedb.org/t/p/w533_and_h300_face/${card.backdrop_path}`} /*src={card.image}*/ className="movie__img" alt=""/>
+            <Link key={index} to={`/player/${card.id}`} >
+            <div className="card" ref={cardsRef}>
+              <img src={`https://media.themoviedb.org/t/p/w533_and_h300_face/${card.backdrop_path}`} className="movie__img" alt=""/>
               <h3 className="movie__title">{card.title}</h3>
             </div>
+            </Link>
           )
         })
       }
