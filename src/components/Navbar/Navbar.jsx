@@ -14,10 +14,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Navbar = (props) => {
   
+  /* ACTIVATE REF AND NAVIGATION HOOKS */
   const navRef = useRef();
   const navigate = useNavigate();
+
+  /* STATE VARIABLE FOR MOBILE MENU TOGGLE */
   const [mobile, setMobile] = useState(false);
 
+  /*  ON COMPONENT MOUNT, ADD A SCROLLING TRACKER
+      THAT TURNS THE GRADIENT MENU BACKGROUND SOLID */
   useEffect(() => {
     console.log("NavRef Current ", navRef.current);
     window.addEventListener('scroll', () => {
@@ -33,6 +38,7 @@ const Navbar = (props) => {
     
   }, [])
   
+  /* TOGGLES MOBILE MENU */
   function openMenu(){
     console.log("mobile menu clicked", mobile);
     if(!mobile){
@@ -45,6 +51,7 @@ const Navbar = (props) => {
     }
   }
 
+  /* USER LOGOUT */
   async function logout(){
     signOut(auth);
     console.log("Signed out");
@@ -52,6 +59,7 @@ const Navbar = (props) => {
 
   return (
     <div ref={navRef} className='navbar'>
+      {/* LEFT NAVBAR */}
       <div className='navbar-left'>
         <img src={logo /* ONCLICK NAV NOT WORKING */} alt=""/>
         <ul>
@@ -64,10 +72,12 @@ const Navbar = (props) => {
         </ul>
       </div>
       
-        
+      {/* HAMBURGER MENU BUTTON */}
       <button className="btn__menu" onClick={openMenu}>
         <FontAwesomeIcon icon={["fas", "bars"]} />
       </button>
+
+      {/* LEFT NAVPANE FOR MOBILE */}
       <div className="navpane__left">
         <button className="btn__menu" onClick={openMenu}>
           <FontAwesomeIcon icon={["fas", "times"]} />
@@ -81,6 +91,8 @@ const Navbar = (props) => {
           <li>Browse by Categories</li>
         </ul>
       </div>
+
+      {/* RIGHT NAVBAR */}
       <div className="navbar__right--container">
 
         <div className='navbar-right'>

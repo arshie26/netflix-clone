@@ -15,7 +15,10 @@ const Home = (props) => {
     <div>
       <Navbar user={props.user} />
       <div className="hero">
+        {/* HERO BANNER */}
         <img src={hero_banner} className='banner__img'/>
+        {/* HERO CONTAINER (POSITION ABSOLUTE) CONTAINS TITLE, DESC, BUTTON, FIRST MOVIE LIST 
+            IN MOBILE, FIRST MOVIE LIST DISAPPEARS*/}
         <div className='hero__caption'>
           <img src={hero_title} className='caption__img'/>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis id facilis
@@ -31,6 +34,7 @@ const Home = (props) => {
           </div>
         </div>
       </div>
+      {/* 4 MORE MOVIE LISTS */}
       <div className="blockbusters">
         <TitleCards title={"Blockbuster Movies"} category="top_rated" />
         <TitleCards title={"Only on Netflix"} category="popular" />

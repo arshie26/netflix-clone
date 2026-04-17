@@ -9,12 +9,10 @@ import { useState, useEffect } from 'react'
 import {BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 
 const App = () => {
   
   const [authUser, setAuthUser] = useState({});
-  const navigate = useNavigate();
 
   useEffect(() => {
     console.log("App User is now ", authUser)

@@ -2,14 +2,20 @@ import React, { useEffect, useState } from 'react'
 import './Player.css'
 import backArrow from '../../assets/back_arrow_icon.png';
 import axios from 'axios';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const Player = () => {
 
+  /* GETS MOVIE ID FROM URL */
   const { id } = useParams();
+
+  /* ACTIVATES NAVIGATION HOOK */
   const navigate = useNavigate();
+
+  /* STATE VARIABLE FOR VIDEO DETAILS */
   const [videoDetails, updateVideoDetails] = useState({});
 
+  /* OPTIONS SETTINGS FOR GETVIDEO VIDEO RETRIEVAL REQUEST */
   const options = {
     method: 'GET',
     headers: {
@@ -30,22 +36,22 @@ const Player = () => {
           title: videoDetails.data?.results[0].name,
           type: videoDetails.data?.results[0].type   
         }
+      
       );
     }
     catch(error){
       console.log("error ", error);
     }
-    console.log(videoDetails.data?.results[0]);
-    console.log(videoDetails.data?.results[0].published_at.slice(0,10));
   }
 
+  /* ON FIRST COMPONENT LOAD, RUNS GETVIDEO VIDEO RETRIEVAL REQUEST */
   useEffect(() => {
     getVideo();
   }, [])
 
   return (
     <div className='player'>
-        <img src={backArrow} className='back__arrow' onClick={navigate(-2)} /> 
+        <img src={backArrow} className='back__arrow' onClick={() => {navigate("/")}} /> 
         <iframe referrerpolicy="strict-origin-when-cross-origin" src={`https://www.youtube.com/embed/${videoDetails.key}`} 
           title='trailer' allowFullScreen  ></iframe>
       <div className="player__info">

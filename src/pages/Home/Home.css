@@ -1,4 +1,5 @@
 
+/* FULLSCREEN HERO IMAGE WITH LINEAR GRADIENT */
 .banner__img{
     width: 100%;
     mask-image: linear-gradient(to right, transparent, black 75%);
@@ -9,6 +10,8 @@
     position: relative;
 }
 
+/* HERO TITLE, DESC, BUTTONS IN
+ POSITION ABSOLUTE CONTAINER */
 .hero__caption{
     position: absolute;
     bottom: 10%;
@@ -18,22 +21,26 @@
     flex-direction: column;
 }
 
-.hero__caption p{
-    max-width: 700px;
-}
-
+/* HERO TITLE */
 .caption__img{
     width: 90%;
     max-width: 420px;
     margin-bottom: 32px;
 }
 
+/* HERO DESCRIPTION */
+.hero__caption p{
+    max-width: 700px;
+}
+
+/* HERO BUTTONS SPACING */
 .hero__btns{
     display: flex;
     gap: 24px;
     margin-top: 32px;
 }
 
+/* HERO BUTTONS STYLING */
 .hero__btns .btn{
     display: inline-flex;
     align-items: center;
@@ -49,29 +56,35 @@
     transition: all ease 300ms;
 }
 
+/* HERO BUTTON IMAGES */
 .hero__btns img{
     width: 30px;
 }
 
+/* DARK HERO BUTTON STYLING */
 .hero__btns .dark-btn{
     background: #6d6d6eb3;
     color: #fff;
 }
 
+/* HERO BUTTON HOVER STYLING */
 .btn:hover{
     background: #ffffffbf;
     transform: scale(1.1);
 }
 
+/* DARK HERO BUTTON HOVER STYLING */
 .dark-btn:hover{
     background-color: #6d6d6e66;
 }
 
+/* STYLING 4 MOVIE LISTS BELOW HERO */
 .blockbusters{
     
     padding-left: 20px;
 }
 
+/* STYLING FOR MOVIE CARDS, 4 TO A ROW */
 .movie__cards{
     display: flex;
 }
@@ -87,20 +100,22 @@
 }
 
 @media (max-width: 768px){
+    
+    /* HERO BANNER STYLING FOR MOBILE */
     .hero__caption{
         bottom: 15%;
         font-size: 10px;
+    }
+
+    .caption__img{
+        margin-bottom: 16px;
+        width: 40%;
     }
 
     .hero__caption p{
         max-width: 350px;
         font-size: 12px;
         margin-bottom: 10px;
-    }
-
-    .caption__img{
-        margin-bottom: 16px;
-        width: 40%;
     }
 
     .hero__btns{
@@ -117,6 +132,7 @@
         width: 20px;
     }
 
+    /* STYLING FOR MOVIE LISTS BELOW HERO BANNER */
     .blockbusters{
         padding-left: 4%;
     }
