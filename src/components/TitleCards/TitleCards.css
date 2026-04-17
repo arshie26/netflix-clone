@@ -19,6 +19,11 @@
     display: none;
 }
 
+.card-list {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
 .movie__img{
     width: 240px;
     border-radius: 4px;
